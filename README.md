@@ -49,3 +49,7 @@ A collection of academic projects and coursework.
 
 ## 📦 การติดตั้งและการใช้งาน (Setup & Installation)
 รอดำเนินการ
+
+## 🔰 เเหล่งที่มา (Source)
+
+**Data จาก web kaggle :** https://www.kaggle.com/datasets/ahmedabbas757/coffee-sales
