@@ -39,7 +39,7 @@ A collection of academic projects and coursework.
 | :--- | :--- |
 | **Week 1** | วางแผนการทำงานโครงงาน |
 | **Week 2** | ศึกษาขั้นตอนและวิธีการเพิ่มเติม เริ่มทดสอบทีละขั้นตอน |
-
+| **Week 3** | เริ่ม Train และ Test Ai  |
 ---
 
 ## 🛠️ เทคโนโลยีที่ใช้ (Tech Stack)
