@@ -47,6 +47,8 @@ A collection of academic projects and coursework.
 
 6.นำไฟล์ app.py ที่สร้างจาก Python เป็นหน้าเว็บ ใส่ลงใน Git Hub และนำไป Run ใน Streamlit
 
+- เว็บที่ทำจาก Python : https://ai-2025-iu4ammg93cnd9ymg5ydyu9.streamlit.app/#project-methodologies-of-artificial-intelligence-by-pxe-chaiwat
+
 ## 📗 ผลสรุป (Summarize)
    ระบบทำนายยอดขายอัจฉริยะถูกพัฒนาขึ้นเพื่อช่วยวิเคราะห์และคาดการณ์ยอดขายสินค้าในร้านค้า โดยใช้เทคโนโลยี Machine Learning ในการเรียนรู้จากข้อมูลยอดขายย้อนหลัง ระบบจะนำข้อมูลสำคัญ ได้แก่ สาขา วัน เดือน และเวลา มาวิเคราะห์เพื่อทำนายว่าสินค้าประเภทใดมีแนวโน้มขายดีที่สุดในช่วงเวลานั้น
    
