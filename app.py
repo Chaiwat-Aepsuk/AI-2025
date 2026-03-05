@@ -66,7 +66,7 @@ model_options = {
     "3. XGBoost Regressor": "m3",
     "4. CatBoost Regressor": "m4",
     "5. LightGBM Regressor": "m5",
-    "6. ANN (โครงข่ายประสาทเทียม)": "m6"
+    "6. Artificial Neural Network (ANN) (โครงข่ายประสาทเทียม)": "m6"
 }
 
 selected_model_name = st.selectbox("📌 เลือก Model", list(model_options.keys()))
@@ -81,8 +81,8 @@ if "Classifier" in selected_model_name:
     col2.metric("Precision", "84.1%")
     col3.metric("F1-Score", "84.5%")
 else:
-    col1.metric("MAE (คลาดเคลื่อนเฉลี่ย)", "±2.88 ชิ้น")
-    col2.metric("RMSE (จุดบอดสูงสุด)", "±4.48 ชิ้น")
+    col1.metric("MAE (คลาดเคลื่อนเฉลี่ย)", "±2.88 ชิ้น/แก้ว")
+    col2.metric("RMSE (จุดบอดสูงสุด)", "±4.48 ชิ้น/แก้ว")
     col3.metric("R-Squared (ความแม่นยำ)", "63.7%")
 
 st.divider()
@@ -196,7 +196,7 @@ if st.button("🚀 สรุปผลการทำนาย", use_container_wi
                     if model_key == 'm1':
                         st.write(f"&nbsp;&nbsp;&nbsp;&nbsp; {idx}. **{row.Category}** : โอกาส {row.Value:.1f}%")
                     else:
-                        st.write(f"&nbsp;&nbsp;&nbsp;&nbsp; {idx}. **{row.Category}** : คาดว่าจะขายได้ประมาณ {row.Value:.1f} ชิ้น ({pct:.1f}%)")
+                        st.write(f"&nbsp;&nbsp;&nbsp;&nbsp; {idx}. **{row.Category}** : คาดว่าจะขายได้ประมาณ {row.Value:.1f} ชิ้น/แก้ว ({pct:.1f}%)")
             else:
                 st.warning("AI คาดการณ์ว่าอาจจะไม่มีการขายในช่วงเวลานี้ หรือขายน้อยมาก")
 
@@ -219,6 +219,27 @@ if st.button("🚀 สรุปผลการทำนาย", use_container_wi
                 
                 for idx, row in enumerate(monthly_sum.itertuples(), 1):
                     pct = (row.total_cups / total_cups_period) * 100
-                    st.write(f"&nbsp;&nbsp;&nbsp;&nbsp; {idx}. **{row.product_category}** : เคยขายได้ {row.total_cups} ชิ้น ({pct:.1f}%)")
+                    st.write(f"&nbsp;&nbsp;&nbsp;&nbsp; {idx}. **{row.product_category}** : เคยขายได้ {row.total_cups} ชิ้น/แก้ว ({pct:.1f}%)")
             else:
                 st.info("- ไม่พบข้อมูลการขายในอดีตสำหรับเงื่อนไขนี้")
+# ==========================================
+# 6. ส่วนท้ายเครดิต (Footer)
+# ==========================================
+st.write("") # เว้นบรรทัด
+st.write("")
+st.divider() # เส้นคั่นบางๆ
+
+# ใช้ HTML/CSS ตกแต่ง
+st.markdown(
+    """
+    <div style="text-align: center; padding-top: 10px; padding-bottom: 20px;">
+        <p style="color: #888; font-size: 14px; margin-bottom: 5px;">
+            📊 Data Source: <a href="https://www.kaggle.com/datasets/ahmedabbas757/coffee-sales" target="_blank" style="text-decoration: none; color: #ff4b4b;">Kaggle</a>
+        </p>
+        <h3 style="background: -webkit-linear-gradient(45deg, #FF6B6B, #4ECDC4, #45B7D1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; letter-spacing: 1px; margin-top: 0px;">
+            ✨ Project Methodologies of Artificial Intelligence by Pxe Chaiwat ✨
+        </h3>
+    </div>
+    """, 
+    unsafe_allow_html=True
+)
