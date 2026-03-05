@@ -94,7 +94,7 @@ st.subheader("📍 ระบุข้อมูลเพื่อทำนาย"
 
 locations = list(store_hours.keys())
 days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-months = list(range(1, 13))
+months = list(range(1, 7))
 
 col_a, col_b = st.columns(2)
 
@@ -243,4 +243,5 @@ st.markdown(
     """, 
     unsafe_allow_html=True
 )
+
 
