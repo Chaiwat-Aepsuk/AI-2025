@@ -237,9 +237,10 @@ st.markdown(
             📊 Data Source: <a href="https://www.kaggle.com/datasets/ahmedabbas757/coffee-sales" target="_blank" style="text-decoration: none; color: #ff4b4b;">Kaggle</a>
         </p>
         <h3 style="background: -webkit-linear-gradient(45deg, #FF6B6B, #4ECDC4, #45B7D1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; letter-spacing: 1px; margin-top: 0px;">
-            ✨ Project Methodologies of Artificial Intelligence by Pxe Chaiwat ✨
+            ✨ Project Methodologies of Artificial Intelligence by Chaiwat Aepsuk ✨
         </h3>
     </div>
     """, 
     unsafe_allow_html=True
 )
+
